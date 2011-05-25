@@ -1,0 +1,5 @@
+tartini (1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Jeremy Salwen <jeremybubs@gmail.com>  Wed, 25 May 2011 19:12:30 -0400
