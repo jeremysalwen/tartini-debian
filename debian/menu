@@ -1,0 +1,2 @@
+?package(tartini):needs="X11" section="Applications/Sound"\
+  title="Tartini" longtitle="Tartini Pitch Analysis" command="/usr/bin/tartini"
