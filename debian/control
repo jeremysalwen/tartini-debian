@@ -1,10 +1,10 @@
 Source: tartini
 Section: sound
 Priority: extra
-Maintainer: Jeremy Salwen <jeremybubs@gmail.com>
+Maintainer: Jeremy Salwen <jeremysalwen@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~)
 Standards-Version: 3.8.4
-Homepage: <insert the upstream URL, if relevant>
+Homepage: http://miracle.otago.ac.nz/tartini/
 Vcs-Git: git://github.com/jeremysalwen/tartini-debian.git
 Vcs-Browser: https://github.com/jeremysalwen/tartini-debian
 
@@ -15,10 +15,10 @@ Description: A real-time music analysis tool
  Tartini is a program designed as a practical music analysis tool for 
  singers and instrumentalists. Just plug in a microphone and instantly 
  your computer will give real-time feedback including:
-
+ 
  * Accurate pitch contours for visualising intonation, vibrato shape, 
-tuning or just which note is being played
-
+ tuning or just which note is being played
+ 
  * Loudness graphs, to help analyse dynamics
  
  * Harmonic structure of a note describing timbre
