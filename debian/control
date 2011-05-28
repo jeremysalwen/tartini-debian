@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/jeremysalwen/tartini-debian
 
 Package: tartini
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqtcore4, libqtgui4, libfftw3, libqwt5-qt4 
 Description: A real-time music analysis tool
  Tartini is a program designed as a practical music analysis tool for 
  singers and instrumentalists. Just plug in a microphone and instantly 
