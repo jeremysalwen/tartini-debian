@@ -1,6 +1,8 @@
 tartini for Debian
 ------------------
 
-<possible notes regarding this package - if none, delete this file>
-
- -- Jeremy Salwen <jeremybubs@gmail.com>  Wed, 25 May 2011 19:12:30 -0400
+Tartini is mostly unmodified.  There is one fix for a segmentation fault 
+which is a bit subtle and not fixed in the original, and a few obvious 
+mistakes in the source code which clearly were simple mistakes rather 
+than changes of functionality.
+ -- Jeremy Salwen <jeremysalwen@gmail.com>  Wed, 25 May 2011 19:12:30 -0400
