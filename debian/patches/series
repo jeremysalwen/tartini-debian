@@ -1,0 +1,7 @@
+0001-Removed-moc-files.patch
+0002-Removed-automatically-generated-qrc_pitch.cpp.patch
+0003-Fixed-Constness-issues.patch
+0004-Commented-out-GLIBC_USE_C99-define.patch
+0005-Made-sure-previous-analysis-succeeded-before-checkin.patch
+0006-Fixed-incorrectly-specified-jpg-png-extension.patch
+0007-Removed-spam-files.patch
