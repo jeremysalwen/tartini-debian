@@ -1,0 +1,19 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Wed, 25 May 2011 19:08:18 -0400
+Subject: [PATCH] Commented out GLIBC_USE_C99 define.
+
+---
+ general/prony.cpp |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/general/prony.cpp b/general/prony.cpp
+index fa4d57b..0775b4e 100644
+--- a/general/prony.cpp
++++ b/general/prony.cpp
+@@ -1,4 +1,4 @@
+-#define _GLIBCXX_USE_C99
++//#define _GLIBCXX_USE_C99
+ #define __WANT_EXTENSIONS__
+ //#include <math.h>
+ #include <cmath>
+-- 

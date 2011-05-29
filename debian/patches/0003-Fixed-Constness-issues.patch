@@ -1,0 +1,48 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Wed, 25 May 2011 19:07:40 -0400
+Subject: [PATCH] Fixed Constness issues.
+
+---
+ general/mystring.cpp |    6 +++---
+ general/mystring.h   |    2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/general/mystring.cpp b/general/mystring.cpp
+index 55ec73d..1d63861 100644
+--- a/general/mystring.cpp
++++ b/general/mystring.cpp
+@@ -78,9 +78,9 @@ char *strip_space(char *s)
+ 
+ //returns a pointer to the file extention part or NULL
+ //if no file extention found
+-char *getFileExtension(const char *filename)
++const char *getFileExtension(const char *filename)
+ {
+-  char *ext;
++  const char *ext;
+   if(filename && (ext = strrchr(filename, '.')) != NULL) return ext+1;
+   else return NULL;
+ }
+@@ -89,7 +89,7 @@ char *getFileExtension(const char *filename)
+ //or NULL if no filename is found
+ const char *getFilenamePart(const char *filename)
+ {
+-  char *ext;
++  const char *ext;
+   if(!filename) return NULL;
+   if((ext = strrchr(filename, '/')) != NULL) return ext+1;
+   if((ext = strrchr(filename, '\\')) != NULL) return ext+1;
+diff --git a/general/mystring.h b/general/mystring.h
+index 1669f26..22db536 100644
+--- a/general/mystring.h
++++ b/general/mystring.h
+@@ -36,7 +36,7 @@ char *strip_space(char *s);
+ 
+ //returns a pointer to the file extention part or NULL
+ //if no file extention found
+-char *getFileExtension(const char *filename);
++const char *getFileExtension(const char *filename);
+ 
+ //returns a pointer to the filename part of a full path name
+ //or NULL if no filename is found
+-- 

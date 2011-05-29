@@ -1,0 +1,21 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Sat, 28 May 2011 03:19:11 -0400
+Subject: [PATCH] Fixed incorrectly specified jpg/png extension.
+
+---
+ pitch.qrc |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/pitch.qrc b/pitch.qrc
+index aaf4353..374b8c8 100644
+--- a/pitch.qrc
++++ b/pitch.qrc
+@@ -1,6 +1,6 @@
+ <!DOCTYPE RCC><RCC version="1.0">
+ <qresource prefix="/res">
+-   <file alias="tartinilogo.png">pics/tartinilogo.png</file>
++   <file alias="tartinilogo.jpg">pics/tartinilogo.jpg</file>
+    <file>LICENSE.txt</file>
+ </qresource>
+ </RCC>
+-- 

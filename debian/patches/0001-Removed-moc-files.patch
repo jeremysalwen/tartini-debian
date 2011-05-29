@@ -1,0 +1,4670 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Wed, 25 May 2011 19:05:52 -0400
+Subject: [PATCH] Removed moc files.
+
+---
+ .moc/moc_amplitudewidget.cpp        |  103 --------------
+ .moc/moc_cepstrumview.cpp           |   60 --------
+ .moc/moc_cepstrumwidget.cpp         |   60 --------
+ .moc/moc_correlationview.cpp        |   60 --------
+ .moc/moc_correlationwidget.cpp      |   69 ---------
+ .moc/moc_debugview.cpp              |   60 --------
+ .moc/moc_debugwidget.cpp            |   60 --------
+ .moc/moc_drawwidget.cpp             |   60 --------
+ .moc/moc_fftview.cpp                |   60 --------
+ .moc/moc_fftwidget.cpp              |   60 --------
+ .moc/moc_freqdrawwidget.cpp         |   60 --------
+ .moc/moc_freqview.cpp               |   74 ----------
+ .moc/moc_freqwidgetGL.cpp           |   60 --------
+ .moc/moc_gdata.cpp                  |  253 ---------------------------------
+ .moc/moc_hblockview.cpp             |   60 --------
+ .moc/moc_hblockwidget.cpp           |   60 --------
+ .moc/moc_hbubbleview.cpp            |   60 --------
+ .moc/moc_hbubblewidget.cpp          |   94 -------------
+ .moc/moc_hcircleview.cpp            |   60 --------
+ .moc/moc_hcirclewidget.cpp          |   74 ----------
+ .moc/moc_hstackview.cpp             |   60 --------
+ .moc/moc_hstackwidget.cpp           |  105 --------------
+ .moc/moc_htrackview.cpp             |   69 ---------
+ .moc/moc_htrackwidget.cpp           |  112 ---------------
+ .moc/moc_ledindicator.cpp           |   60 --------
+ .moc/moc_mainwindow.cpp             |  263 -----------------------------------
+ .moc/moc_myscrollbar.cpp            |  118 ----------------
+ .moc/moc_openfiles.cpp              |   78 ----------
+ .moc/moc_pianoview.cpp              |   69 ---------
+ .moc/moc_pitchcompassdrawwidget.cpp |   70 ---------
+ .moc/moc_pitchcompassview.cpp       |   60 --------
+ .moc/moc_scoreview.cpp              |   60 --------
+ .moc/moc_scorewidget.cpp            |   87 ------------
+ .moc/moc_summarydrawwidget.cpp      |   60 --------
+ .moc/moc_summaryview.cpp            |   60 --------
+ .moc/moc_tartinisettingsdialog.cpp  |  101 -------------
+ .moc/moc_timeaxis.cpp               |   75 ----------
+ .moc/moc_tunerview.cpp              |   74 ----------
+ .moc/moc_tunerwidget.cpp            |   60 --------
+ .moc/moc_vibratocirclewidget.cpp    |   74 ----------
+ .moc/moc_vibratoperiodwidget.cpp    |   85 -----------
+ .moc/moc_vibratospeedwidget.cpp     |   72 ----------
+ .moc/moc_vibratotimeaxis.cpp        |   72 ----------
+ .moc/moc_vibratotunerwidget.cpp     |   81 -----------
+ .moc/moc_vibratoview.cpp            |   60 --------
+ .moc/moc_vibratowidget.cpp          |   78 ----------
+ .moc/moc_view.cpp                   |  255 ---------------------------------
+ .moc/moc_viewwidget.cpp             |   60 --------
+ .moc/moc_volumemeterview.cpp        |   60 --------
+ .moc/moc_volumemeterwidget.cpp      |   60 --------
+ .moc/moc_waveview.cpp               |   60 --------
+ .moc/moc_wavewidget.cpp             |   81 -----------
+ 52 files changed, 0 insertions(+), 4246 deletions(-)
+ delete mode 100644 .moc/moc_amplitudewidget.cpp
+ delete mode 100644 .moc/moc_cepstrumview.cpp
+ delete mode 100644 .moc/moc_cepstrumwidget.cpp
+ delete mode 100644 .moc/moc_correlationview.cpp
+ delete mode 100644 .moc/moc_correlationwidget.cpp
+ delete mode 100644 .moc/moc_debugview.cpp
+ delete mode 100644 .moc/moc_debugwidget.cpp
+ delete mode 100644 .moc/moc_drawwidget.cpp
+ delete mode 100644 .moc/moc_fftview.cpp
+ delete mode 100644 .moc/moc_fftwidget.cpp
+ delete mode 100644 .moc/moc_freqdrawwidget.cpp
+ delete mode 100644 .moc/moc_freqview.cpp
+ delete mode 100644 .moc/moc_freqwidgetGL.cpp
+ delete mode 100644 .moc/moc_gdata.cpp
+ delete mode 100644 .moc/moc_hblockview.cpp
+ delete mode 100644 .moc/moc_hblockwidget.cpp
+ delete mode 100644 .moc/moc_hbubbleview.cpp
+ delete mode 100644 .moc/moc_hbubblewidget.cpp
+ delete mode 100644 .moc/moc_hcircleview.cpp
+ delete mode 100644 .moc/moc_hcirclewidget.cpp
+ delete mode 100644 .moc/moc_hstackview.cpp
+ delete mode 100644 .moc/moc_hstackwidget.cpp
+ delete mode 100644 .moc/moc_htrackview.cpp
+ delete mode 100644 .moc/moc_htrackwidget.cpp
+ delete mode 100644 .moc/moc_ledindicator.cpp
+ delete mode 100644 .moc/moc_mainwindow.cpp
+ delete mode 100644 .moc/moc_myscrollbar.cpp
+ delete mode 100644 .moc/moc_openfiles.cpp
+ delete mode 100644 .moc/moc_pianoview.cpp
+ delete mode 100644 .moc/moc_pitchcompassdrawwidget.cpp
+ delete mode 100644 .moc/moc_pitchcompassview.cpp
+ delete mode 100644 .moc/moc_scoreview.cpp
+ delete mode 100644 .moc/moc_scorewidget.cpp
+ delete mode 100644 .moc/moc_summarydrawwidget.cpp
+ delete mode 100644 .moc/moc_summaryview.cpp
+ delete mode 100644 .moc/moc_tartinisettingsdialog.cpp
+ delete mode 100644 .moc/moc_timeaxis.cpp
+ delete mode 100644 .moc/moc_tunerview.cpp
+ delete mode 100644 .moc/moc_tunerwidget.cpp
+ delete mode 100644 .moc/moc_vibratocirclewidget.cpp
+ delete mode 100644 .moc/moc_vibratoperiodwidget.cpp
+ delete mode 100644 .moc/moc_vibratospeedwidget.cpp
+ delete mode 100644 .moc/moc_vibratotimeaxis.cpp
+ delete mode 100644 .moc/moc_vibratotunerwidget.cpp
+ delete mode 100644 .moc/moc_vibratoview.cpp
+ delete mode 100644 .moc/moc_vibratowidget.cpp
+ delete mode 100644 .moc/moc_view.cpp
+ delete mode 100644 .moc/moc_viewwidget.cpp
+ delete mode 100644 .moc/moc_volumemeterview.cpp
+ delete mode 100644 .moc/moc_volumemeterwidget.cpp
+ delete mode 100644 .moc/moc_waveview.cpp
+ delete mode 100644 .moc/moc_wavewidget.cpp
+
+diff --git a/.moc/moc_amplitudewidget.cpp b/.moc/moc_amplitudewidget.cpp
+deleted file mode 100644
+index 74896a8..0000000
+--- a/.moc/moc_amplitudewidget.cpp
++++ /dev/null
+@@ -1,103 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'amplitudewidget.h'
+-**
+-** Created: Thu Jun 21 21:45:52 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/freq/amplitudewidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'amplitudewidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_AmplitudeWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       5,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      17,   16,   16,   16, 0x05,
+-      38,   16,   16,   16, 0x05,
+-      60,   16,   16,   16, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      94,   85,   16,   16, 0x0a,
+-     121,  111,   16,   16, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_AmplitudeWidget[] = {
+-    "AmplitudeWidget\0\0rangeChanged(double)\0"
+-    "offsetChanged(double)\0offsetInvChanged(double)\0"
+-    "newRange\0setRange(double)\0newOffset\0"
+-    "setOffset(double)\0"
+-};
+-
+-const QMetaObject AmplitudeWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_AmplitudeWidget,
+-      qt_meta_data_AmplitudeWidget, 0 }
+-};
+-
+-const QMetaObject *AmplitudeWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *AmplitudeWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_AmplitudeWidget))
+-	return static_cast<void*>(const_cast< AmplitudeWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int AmplitudeWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: rangeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: offsetChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: offsetInvChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: setRange((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 4: setOffset((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 5;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void AmplitudeWidget::rangeChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void AmplitudeWidget::offsetChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+-
+-// SIGNAL 2
+-void AmplitudeWidget::offsetInvChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+-}
+diff --git a/.moc/moc_cepstrumview.cpp b/.moc/moc_cepstrumview.cpp
+deleted file mode 100644
+index d7a5213..0000000
+--- a/.moc/moc_cepstrumview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'cepstrumview.h'
+-**
+-** Created: Thu Jun 21 21:45:56 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/cepstrum/cepstrumview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'cepstrumview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_CepstrumView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_CepstrumView[] = {
+-    "CepstrumView\0"
+-};
+-
+-const QMetaObject CepstrumView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_CepstrumView,
+-      qt_meta_data_CepstrumView, 0 }
+-};
+-
+-const QMetaObject *CepstrumView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *CepstrumView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_CepstrumView))
+-	return static_cast<void*>(const_cast< CepstrumView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int CepstrumView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_cepstrumwidget.cpp b/.moc/moc_cepstrumwidget.cpp
+deleted file mode 100644
+index 7f06c1d..0000000
+--- a/.moc/moc_cepstrumwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'cepstrumwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:56 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/cepstrum/cepstrumwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'cepstrumwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_CepstrumWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_CepstrumWidget[] = {
+-    "CepstrumWidget\0"
+-};
+-
+-const QMetaObject CepstrumWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_CepstrumWidget,
+-      qt_meta_data_CepstrumWidget, 0 }
+-};
+-
+-const QMetaObject *CepstrumWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *CepstrumWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_CepstrumWidget))
+-	return static_cast<void*>(const_cast< CepstrumWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int CepstrumWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_correlationview.cpp b/.moc/moc_correlationview.cpp
+deleted file mode 100644
+index 4d79078..0000000
+--- a/.moc/moc_correlationview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'correlationview.h'
+-**
+-** Created: Thu Jun 21 21:45:54 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/correlation/correlationview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'correlationview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_CorrelationView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_CorrelationView[] = {
+-    "CorrelationView\0"
+-};
+-
+-const QMetaObject CorrelationView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_CorrelationView,
+-      qt_meta_data_CorrelationView, 0 }
+-};
+-
+-const QMetaObject *CorrelationView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *CorrelationView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_CorrelationView))
+-	return static_cast<void*>(const_cast< CorrelationView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int CorrelationView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_correlationwidget.cpp b/.moc/moc_correlationwidget.cpp
+deleted file mode 100644
+index ccd73de..0000000
+--- a/.moc/moc_correlationwidget.cpp
++++ /dev/null
+@@ -1,69 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'correlationwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:54 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/correlation/correlationwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'correlationwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_CorrelationWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       1,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      24,   19,   18,   18, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_CorrelationWidget[] = {
+-    "CorrelationWidget\0\0mode\0setAggregateMode(int)\0"
+-};
+-
+-const QMetaObject CorrelationWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_CorrelationWidget,
+-      qt_meta_data_CorrelationWidget, 0 }
+-};
+-
+-const QMetaObject *CorrelationWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *CorrelationWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_CorrelationWidget))
+-	return static_cast<void*>(const_cast< CorrelationWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int CorrelationWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: setAggregateMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        }
+-        _id -= 1;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_debugview.cpp b/.moc/moc_debugview.cpp
+deleted file mode 100644
+index c7b2f82..0000000
+--- a/.moc/moc_debugview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'debugview.h'
+-**
+-** Created: Thu Jun 21 21:45:57 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/debugview/debugview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'debugview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_DebugView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_DebugView[] = {
+-    "DebugView\0"
+-};
+-
+-const QMetaObject DebugView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_DebugView,
+-      qt_meta_data_DebugView, 0 }
+-};
+-
+-const QMetaObject *DebugView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *DebugView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_DebugView))
+-	return static_cast<void*>(const_cast< DebugView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int DebugView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_debugwidget.cpp b/.moc/moc_debugwidget.cpp
+deleted file mode 100644
+index f3c312d..0000000
+--- a/.moc/moc_debugwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'debugwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:57 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/debugview/debugwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'debugwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_DebugWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_DebugWidget[] = {
+-    "DebugWidget\0"
+-};
+-
+-const QMetaObject DebugWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_DebugWidget,
+-      qt_meta_data_DebugWidget, 0 }
+-};
+-
+-const QMetaObject *DebugWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *DebugWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_DebugWidget))
+-	return static_cast<void*>(const_cast< DebugWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int DebugWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_drawwidget.cpp b/.moc/moc_drawwidget.cpp
+deleted file mode 100644
+index 65b4eff..0000000
+--- a/.moc/moc_drawwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'drawwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:38 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/drawwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'drawwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_DrawWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_DrawWidget[] = {
+-    "DrawWidget\0"
+-};
+-
+-const QMetaObject DrawWidget::staticMetaObject = {
+-    { &QWidget::staticMetaObject, qt_meta_stringdata_DrawWidget,
+-      qt_meta_data_DrawWidget, 0 }
+-};
+-
+-const QMetaObject *DrawWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *DrawWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_DrawWidget))
+-	return static_cast<void*>(const_cast< DrawWidget*>(this));
+-    return QWidget::qt_metacast(_clname);
+-}
+-
+-int DrawWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_fftview.cpp b/.moc/moc_fftview.cpp
+deleted file mode 100644
+index 020d5ee..0000000
+--- a/.moc/moc_fftview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'fftview.h'
+-**
+-** Created: Thu Jun 21 21:45:55 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/fft/fftview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'fftview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_FFTView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_FFTView[] = {
+-    "FFTView\0"
+-};
+-
+-const QMetaObject FFTView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_FFTView,
+-      qt_meta_data_FFTView, 0 }
+-};
+-
+-const QMetaObject *FFTView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *FFTView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_FFTView))
+-	return static_cast<void*>(const_cast< FFTView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int FFTView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_fftwidget.cpp b/.moc/moc_fftwidget.cpp
+deleted file mode 100644
+index 1eae134..0000000
+--- a/.moc/moc_fftwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'fftwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:55 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/fft/fftwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'fftwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_FFTWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_FFTWidget[] = {
+-    "FFTWidget\0"
+-};
+-
+-const QMetaObject FFTWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_FFTWidget,
+-      qt_meta_data_FFTWidget, 0 }
+-};
+-
+-const QMetaObject *FFTWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *FFTWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_FFTWidget))
+-	return static_cast<void*>(const_cast< FFTWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int FFTWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_freqdrawwidget.cpp b/.moc/moc_freqdrawwidget.cpp
+deleted file mode 100644
+index af1da0e..0000000
+--- a/.moc/moc_freqdrawwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'freqdrawwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:40 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/freq/freqdrawwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'freqdrawwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_FreqDrawWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_FreqDrawWidget[] = {
+-    "FreqDrawWidget\0"
+-};
+-
+-const QMetaObject FreqDrawWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_FreqDrawWidget,
+-      qt_meta_data_FreqDrawWidget, 0 }
+-};
+-
+-const QMetaObject *FreqDrawWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *FreqDrawWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_FreqDrawWidget))
+-	return static_cast<void*>(const_cast< FreqDrawWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int FreqDrawWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_freqview.cpp b/.moc/moc_freqview.cpp
+deleted file mode 100644
+index 85cb45d..0000000
+--- a/.moc/moc_freqview.cpp
++++ /dev/null
+@@ -1,74 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'freqview.h'
+-**
+-** Created: Thu Jun 21 21:45:41 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/freq/freqview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'freqview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_FreqView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       3,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      10,    9,    9,    9, 0x0a,
+-      19,    9,    9,    9, 0x0a,
+-      29,    9,    9,    9, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_FreqView[] = {
+-    "FreqView\0\0zoomIn()\0zoomOut()\0"
+-    "setAmplitudeZoom(double)\0"
+-};
+-
+-const QMetaObject FreqView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_FreqView,
+-      qt_meta_data_FreqView, 0 }
+-};
+-
+-const QMetaObject *FreqView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *FreqView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_FreqView))
+-	return static_cast<void*>(const_cast< FreqView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int FreqView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: zoomIn(); break;
+-        case 1: zoomOut(); break;
+-        case 2: setAmplitudeZoom((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 3;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_freqwidgetGL.cpp b/.moc/moc_freqwidgetGL.cpp
+deleted file mode 100644
+index 0d6a620..0000000
+--- a/.moc/moc_freqwidgetGL.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'freqwidgetGL.h'
+-**
+-** Created: Thu Jun 21 21:45:40 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/freq/freqwidgetGL.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'freqwidgetGL.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_FreqWidgetGL[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_FreqWidgetGL[] = {
+-    "FreqWidgetGL\0"
+-};
+-
+-const QMetaObject FreqWidgetGL::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_FreqWidgetGL,
+-      qt_meta_data_FreqWidgetGL, 0 }
+-};
+-
+-const QMetaObject *FreqWidgetGL::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *FreqWidgetGL::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_FreqWidgetGL))
+-	return static_cast<void*>(const_cast< FreqWidgetGL*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int FreqWidgetGL::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_gdata.cpp b/.moc/moc_gdata.cpp
+deleted file mode 100644
+index d64a1fb..0000000
+--- a/.moc/moc_gdata.cpp
++++ /dev/null
+@@ -1,253 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'gdata.h'
+-**
+-** Created: Thu Jun 21 21:45:49 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../global/gdata.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'gdata.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_GData[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-      40,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      14,    7,    6,    6, 0x05,
+-      65,   45,    6,    6, 0x05,
+-      98,   96,    6,    6, 0x05,
+-     122,   96,    6,    6, 0x05,
+-     168,  147,    6,    6, 0x05,
+-     200,    6,    6,    6, 0x05,
+-     218,    6,    6,    6, 0x05,
+-     238,  234,    6,    6, 0x05,
+-     264,  259,    6,    6, 0x05,
+-     289,  259,    6,    6, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-     314,  259,    6,    6, 0x0a,
+-     350,  340,    6,    6, 0x0a,
+-     385,  373,    6,    6, 0x0a,
+-     419,  405,    6,    6, 0x0a,
+-     458,  441,    6,    6, 0x0a,
+-     483,  234,    6,    6, 0x0a,
+-     500,  259,    6,    6, 0x0a,
+-     521,  259,    6,    6, 0x0a,
+-     542,   96,    6,    6, 0x0a,
+-     559,   96,    6,    6, 0x0a,
+-     573,    6,    6,    6, 0x0a,
+-     602,  591,  586,    6, 0x0a,
+-     642,  640,  586,    6, 0x0a,
+-     664,    6,    6,    6, 0x0a,
+-     693,  691,    6,    6, 0x0a,
+-     723,    6,    6,    6, 0x0a,
+-     748,    6,    6,    6, 0x0a,
+-     760,    6,    6,    6, 0x0a,
+-     769,    6,  586,    6, 0x0a,
+-     776,    6,    6,    6, 0x0a,
+-     783,    6,    6,    6, 0x0a,
+-     789,    6,    6,    6, 0x0a,
+-     803,    6,  586,    6, 0x0a,
+-     819,    6,    6,    6, 0x0a,
+-     836,    6,    6,    6, 0x0a,
+-     874,  862,  854,    6, 0x0a,
+-     913,  899,  895,    6, 0x0a,
+-     958,  942,  895,    6, 0x0a,
+-     984,   45,    6,    6, 0x0a,
+-    1013,    6,    6,    6, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_GData[] = {
+-    "GData\0\0active\0activeChannelChanged(Channel*)\0"
+-    "thresholdPercentage\0activeIntThresholdChanged(int)\0"
+-    "x\0leftTimeChanged(double)\0"
+-    "rightTimeChanged(double)\0leftTime_,rightTime_\0"
+-    "timeRangeChanged(double,double)\0"
+-    "channelsChanged()\0onChunkUpdate()\0key\0"
+-    "musicKeyChanged(int)\0type\0"
+-    "musicKeyTypeChanged(int)\0"
+-    "temperedTypeChanged(int)\0"
+-    "setInterpolatingType(int)\0num_steps\0"
+-    "setBisectionSteps(int)\0num_repeats\0"
+-    "setFastRepeats(int)\0amplitudeMode\0"
+-    "setAmplitudeMode(int)\0pitchContourMode\0"
+-    "setPitchContourMode(int)\0setMusicKey(int)\0"
+-    "setMusicKeyType(int)\0setTemperedType(int)\0"
+-    "setFreqA(double)\0setFreqA(int)\0"
+-    "pauseSound()\0bool\0sRec,sPlay\0"
+-    "openPlayRecord(SoundFile*,SoundFile*)\0"
+-    "s\0playSound(SoundFile*)\0"
+-    "updateViewLeftRightTimes()\0t\0"
+-    "updateActiveChunkTime(double)\0"
+-    "updateQuickRefSettings()\0beginning()\0"
+-    "rewind()\0play()\0stop()\0end()\0fastforward()\0"
+-    "closeAllFiles()\0saveActiveFile()\0"
+-    "closeActiveFile()\0QString\0oldFilename\0"
+-    "saveFileAsk(QString)\0int\0s,newFilename\0"
+-    "saveFile(SoundFile*,QString)\0"
+-    "s,theSavingMode\0closeFile(SoundFile*,int)\0"
+-    "resetActiveIntThreshold(int)\0"
+-    "doChunkUpdate()\0"
+-};
+-
+-const QMetaObject GData::staticMetaObject = {
+-    { &QObject::staticMetaObject, qt_meta_stringdata_GData,
+-      qt_meta_data_GData, 0 }
+-};
+-
+-const QMetaObject *GData::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *GData::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_GData))
+-	return static_cast<void*>(const_cast< GData*>(this));
+-    return QObject::qt_metacast(_clname);
+-}
+-
+-int GData::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QObject::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: activeChannelChanged((*reinterpret_cast< Channel*(*)>(_a[1]))); break;
+-        case 1: activeIntThresholdChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 2: leftTimeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: rightTimeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 4: timeRangeChanged((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+-        case 5: channelsChanged(); break;
+-        case 6: onChunkUpdate(); break;
+-        case 7: musicKeyChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 8: musicKeyTypeChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 9: temperedTypeChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 10: setInterpolatingType((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 11: setBisectionSteps((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 12: setFastRepeats((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 13: setAmplitudeMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 14: setPitchContourMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 15: setMusicKey((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 16: setMusicKeyType((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 17: setTemperedType((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 18: setFreqA((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 19: setFreqA((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 20: pauseSound(); break;
+-        case 21: { bool _r = openPlayRecord((*reinterpret_cast< SoundFile*(*)>(_a[1])),(*reinterpret_cast< SoundFile*(*)>(_a[2])));
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        case 22: { bool _r = playSound((*reinterpret_cast< SoundFile*(*)>(_a[1])));
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        case 23: updateViewLeftRightTimes(); break;
+-        case 24: updateActiveChunkTime((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 25: updateQuickRefSettings(); break;
+-        case 26: beginning(); break;
+-        case 27: rewind(); break;
+-        case 28: { bool _r = play();
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        case 29: stop(); break;
+-        case 30: end(); break;
+-        case 31: fastforward(); break;
+-        case 32: { bool _r = closeAllFiles();
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        case 33: saveActiveFile(); break;
+-        case 34: closeActiveFile(); break;
+-        case 35: { QString _r = saveFileAsk((*reinterpret_cast< QString(*)>(_a[1])));
+-            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
+-        case 36: { int _r = saveFile((*reinterpret_cast< SoundFile*(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])));
+-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+-        case 37: { int _r = closeFile((*reinterpret_cast< SoundFile*(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
+-            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+-        case 38: resetActiveIntThreshold((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 39: doChunkUpdate(); break;
+-        }
+-        _id -= 40;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void GData::activeChannelChanged(Channel * _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void GData::activeIntThresholdChanged(int _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+-
+-// SIGNAL 2
+-void GData::leftTimeChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+-}
+-
+-// SIGNAL 3
+-void GData::rightTimeChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 3, _a);
+-}
+-
+-// SIGNAL 4
+-void GData::timeRangeChanged(double _t1, double _t2)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+-    QMetaObject::activate(this, &staticMetaObject, 4, _a);
+-}
+-
+-// SIGNAL 5
+-void GData::channelsChanged()
+-{
+-    QMetaObject::activate(this, &staticMetaObject, 5, 0);
+-}
+-
+-// SIGNAL 6
+-void GData::onChunkUpdate()
+-{
+-    QMetaObject::activate(this, &staticMetaObject, 6, 0);
+-}
+-
+-// SIGNAL 7
+-void GData::musicKeyChanged(int _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 7, _a);
+-}
+-
+-// SIGNAL 8
+-void GData::musicKeyTypeChanged(int _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 8, _a);
+-}
+-
+-// SIGNAL 9
+-void GData::temperedTypeChanged(int _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 9, _a);
+-}
+diff --git a/.moc/moc_hblockview.cpp b/.moc/moc_hblockview.cpp
+deleted file mode 100644
+index 6a207d7..0000000
+--- a/.moc/moc_hblockview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hblockview.h'
+-**
+-** Created: Thu Jun 21 21:45:45 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hblock/hblockview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hblockview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HBlockView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HBlockView[] = {
+-    "HBlockView\0"
+-};
+-
+-const QMetaObject HBlockView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_HBlockView,
+-      qt_meta_data_HBlockView, 0 }
+-};
+-
+-const QMetaObject *HBlockView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HBlockView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HBlockView))
+-	return static_cast<void*>(const_cast< HBlockView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int HBlockView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_hblockwidget.cpp b/.moc/moc_hblockwidget.cpp
+deleted file mode 100644
+index ad6cbde..0000000
+--- a/.moc/moc_hblockwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hblockwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:45 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hblock/hblockwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hblockwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HBlockWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HBlockWidget[] = {
+-    "HBlockWidget\0"
+-};
+-
+-const QMetaObject HBlockWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_HBlockWidget,
+-      qt_meta_data_HBlockWidget, 0 }
+-};
+-
+-const QMetaObject *HBlockWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HBlockWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HBlockWidget))
+-	return static_cast<void*>(const_cast< HBlockWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int HBlockWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_hbubbleview.cpp b/.moc/moc_hbubbleview.cpp
+deleted file mode 100644
+index 9ea3699..0000000
+--- a/.moc/moc_hbubbleview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hbubbleview.h'
+-**
+-** Created: Thu Jun 21 21:45:46 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hbubble/hbubbleview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hbubbleview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HBubbleView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HBubbleView[] = {
+-    "HBubbleView\0"
+-};
+-
+-const QMetaObject HBubbleView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_HBubbleView,
+-      qt_meta_data_HBubbleView, 0 }
+-};
+-
+-const QMetaObject *HBubbleView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HBubbleView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HBubbleView))
+-	return static_cast<void*>(const_cast< HBubbleView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int HBubbleView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_hbubblewidget.cpp b/.moc/moc_hbubblewidget.cpp
+deleted file mode 100644
+index 33eaae6..0000000
+--- a/.moc/moc_hbubblewidget.cpp
++++ /dev/null
+@@ -1,94 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hbubblewidget.h'
+-**
+-** Created: Thu Jun 21 21:45:47 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hbubble/hbubblewidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hbubblewidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HBubbleWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       4,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      15,   14,   14,   14, 0x05,
+-      43,   14,   14,   14, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      72,   14,   14,   14, 0x0a,
+-      96,   14,   14,   14, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HBubbleWidget[] = {
+-    "HBubbleWidget\0\0numHarmonicsChanged(double)\0"
+-    "historyChunksChanged(double)\0"
+-    "setNumHarmonics(double)\0"
+-    "setHistoryChunks(double)\0"
+-};
+-
+-const QMetaObject HBubbleWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_HBubbleWidget,
+-      qt_meta_data_HBubbleWidget, 0 }
+-};
+-
+-const QMetaObject *HBubbleWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HBubbleWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HBubbleWidget))
+-	return static_cast<void*>(const_cast< HBubbleWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int HBubbleWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: numHarmonicsChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: historyChunksChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: setNumHarmonics((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: setHistoryChunks((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 4;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void HBubbleWidget::numHarmonicsChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void HBubbleWidget::historyChunksChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+diff --git a/.moc/moc_hcircleview.cpp b/.moc/moc_hcircleview.cpp
+deleted file mode 100644
+index dffc541..0000000
+--- a/.moc/moc_hcircleview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hcircleview.h'
+-**
+-** Created: Thu Jun 21 21:45:47 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hcircle/hcircleview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hcircleview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HCircleView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HCircleView[] = {
+-    "HCircleView\0"
+-};
+-
+-const QMetaObject HCircleView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_HCircleView,
+-      qt_meta_data_HCircleView, 0 }
+-};
+-
+-const QMetaObject *HCircleView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HCircleView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HCircleView))
+-	return static_cast<void*>(const_cast< HCircleView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int HCircleView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_hcirclewidget.cpp b/.moc/moc_hcirclewidget.cpp
+deleted file mode 100644
+index f1c551c..0000000
+--- a/.moc/moc_hcirclewidget.cpp
++++ /dev/null
+@@ -1,74 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hcirclewidget.h'
+-**
+-** Created: Thu Jun 21 21:45:48 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hcircle/hcirclewidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hcirclewidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HCircleWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       3,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      15,   14,   14,   14, 0x0a,
+-      31,   14,   14,   14, 0x0a,
+-      52,   14,   14,   14, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HCircleWidget[] = {
+-    "HCircleWidget\0\0setZoom(double)\0"
+-    "setThreshold(double)\0setLowestValue(double)\0"
+-};
+-
+-const QMetaObject HCircleWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_HCircleWidget,
+-      qt_meta_data_HCircleWidget, 0 }
+-};
+-
+-const QMetaObject *HCircleWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HCircleWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HCircleWidget))
+-	return static_cast<void*>(const_cast< HCircleWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int HCircleWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: setZoom((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: setThreshold((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: setLowestValue((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 3;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_hstackview.cpp b/.moc/moc_hstackview.cpp
+deleted file mode 100644
+index 10c4ce4..0000000
+--- a/.moc/moc_hstackview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hstackview.h'
+-**
+-** Created: Thu Jun 21 21:45:45 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hstack/hstackview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hstackview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HStackView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HStackView[] = {
+-    "HStackView\0"
+-};
+-
+-const QMetaObject HStackView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_HStackView,
+-      qt_meta_data_HStackView, 0 }
+-};
+-
+-const QMetaObject *HStackView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HStackView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HStackView))
+-	return static_cast<void*>(const_cast< HStackView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int HStackView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_hstackwidget.cpp b/.moc/moc_hstackwidget.cpp
+deleted file mode 100644
+index e8b2946..0000000
+--- a/.moc/moc_hstackwidget.cpp
++++ /dev/null
+@@ -1,105 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'hstackwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:46 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/hstack/hstackwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'hstackwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HStackWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       6,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      14,   13,   13,   13, 0x05,
+-      40,   13,   13,   13, 0x05,
+-      64,   13,   13,   13, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      87,   13,   13,   13, 0x0a,
+-     109,   13,   13,   13, 0x0a,
+-     129,   13,   13,   13, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HStackWidget[] = {
+-    "HStackWidget\0\0windowSizeChanged(double)\0"
+-    "dBOffsetChanged(double)\0dBRangeChanged(double)\0"
+-    "setWindowSize(double)\0setDBOffset(double)\0"
+-    "setDBRange(double)\0"
+-};
+-
+-const QMetaObject HStackWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_HStackWidget,
+-      qt_meta_data_HStackWidget, 0 }
+-};
+-
+-const QMetaObject *HStackWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HStackWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HStackWidget))
+-	return static_cast<void*>(const_cast< HStackWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int HStackWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: windowSizeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: dBOffsetChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: dBRangeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: setWindowSize((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 4: setDBOffset((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 5: setDBRange((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 6;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void HStackWidget::windowSizeChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void HStackWidget::dBOffsetChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+-
+-// SIGNAL 2
+-void HStackWidget::dBRangeChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+-}
+diff --git a/.moc/moc_htrackview.cpp b/.moc/moc_htrackview.cpp
+deleted file mode 100644
+index 54d049b..0000000
+--- a/.moc/moc_htrackview.cpp
++++ /dev/null
+@@ -1,69 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'htrackview.h'
+-**
+-** Created: Thu Jun 21 21:45:53 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/htrack/htrackview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'htrackview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HTrackView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       1,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      18,   12,   11,   11, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HTrackView[] = {
+-    "HTrackView\0\0value\0setPeakThreshold(int)\0"
+-};
+-
+-const QMetaObject HTrackView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_HTrackView,
+-      qt_meta_data_HTrackView, 0 }
+-};
+-
+-const QMetaObject *HTrackView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HTrackView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HTrackView))
+-	return static_cast<void*>(const_cast< HTrackView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int HTrackView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: setPeakThreshold((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        }
+-        _id -= 1;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_htrackwidget.cpp b/.moc/moc_htrackwidget.cpp
+deleted file mode 100644
+index 2e69c10..0000000
+--- a/.moc/moc_htrackwidget.cpp
++++ /dev/null
+@@ -1,112 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'htrackwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:53 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/htrack/htrackwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'htrackwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_HTrackWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       8,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      14,   13,   13,   13, 0x05,
+-      42,   13,   13,   13, 0x05,
+-      77,   13,   13,   13, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-     124,  110,   13,   13, 0x0a,
+-     154,  148,   13,   13, 0x0a,
+-     185,  148,   13,   13, 0x0a,
+-     223,  214,   13,   13, 0x0a,
+-     247,   13,   13,   13, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_HTrackWidget[] = {
+-    "HTrackWidget\0\0distanceAwayChanged(double)\0"
+-    "viewAngleHorizontalChanged(double)\0"
+-    "viewAngleVerticalChanged(double)\0"
+-    "peakThreshold\0setPeakThreshold(float)\0"
+-    "angle\0setViewAngleHorizontal(double)\0"
+-    "setViewAngleVertical(double)\0distance\0"
+-    "setDistanceAway(double)\0home()\0"
+-};
+-
+-const QMetaObject HTrackWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_HTrackWidget,
+-      qt_meta_data_HTrackWidget, 0 }
+-};
+-
+-const QMetaObject *HTrackWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *HTrackWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_HTrackWidget))
+-	return static_cast<void*>(const_cast< HTrackWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int HTrackWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: distanceAwayChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: viewAngleHorizontalChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: viewAngleVerticalChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: setPeakThreshold((*reinterpret_cast< float(*)>(_a[1]))); break;
+-        case 4: setViewAngleHorizontal((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 5: setViewAngleVertical((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 6: setDistanceAway((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 7: home(); break;
+-        }
+-        _id -= 8;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void HTrackWidget::distanceAwayChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void HTrackWidget::viewAngleHorizontalChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+-
+-// SIGNAL 2
+-void HTrackWidget::viewAngleVerticalChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+-}
+diff --git a/.moc/moc_ledindicator.cpp b/.moc/moc_ledindicator.cpp
+deleted file mode 100644
+index e20fa15..0000000
+--- a/.moc/moc_ledindicator.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'ledindicator.h'
+-**
+-** Created: Thu Jun 21 21:45:37 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/ledindicator.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'ledindicator.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_LEDIndicator[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_LEDIndicator[] = {
+-    "LEDIndicator\0"
+-};
+-
+-const QMetaObject LEDIndicator::staticMetaObject = {
+-    { &QWidget::staticMetaObject, qt_meta_stringdata_LEDIndicator,
+-      qt_meta_data_LEDIndicator, 0 }
+-};
+-
+-const QMetaObject *LEDIndicator::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *LEDIndicator::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_LEDIndicator))
+-	return static_cast<void*>(const_cast< LEDIndicator*>(this));
+-    return QWidget::qt_metacast(_clname);
+-}
+-
+-int LEDIndicator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_mainwindow.cpp b/.moc/moc_mainwindow.cpp
+deleted file mode 100644
+index 9038fea..0000000
+--- a/.moc/moc_mainwindow.cpp
++++ /dev/null
+@@ -1,263 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'mainwindow.h'
+-**
+-** Created: Thu Jun 21 21:45:39 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/mainwindow/mainwindow.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'mainwindow.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_MainWindow[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-      35,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      12,   11,   11,   11, 0x05,
+-      40,   11,   11,   11, 0x05,
+-      56,   11,   11,   11, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      73,   11,   11,   11, 0x0a,
+-      93,   84,   11,   11, 0x0a,
+-     115,   11,   11,   11, 0x0a,
+-     128,   11,   11,   11, 0x0a,
+-     153,  145,   11,   11, 0x0a,
+-     170,   11,   11,   11, 0x0a,
+-     194,  188,   11,   11, 0x0a,
+-     219,   11,   11,   11, 0x0a,
+-     237,   11,   11,   11, 0x0a,
+-     264,  261,   11,   11, 0x0a,
+-     289,   11,   11,   11, 0x0a,
+-     326,  319,  310,   11, 0x0a,
+-     342,  340,   11,   11, 0x0a,
+-     363,   11,   11,   11, 0x0a,
+-     379,   11,   11,   11, 0x0a,
+-     404,  394,   11,   11, 0x0a,
+-     432,   11,   11,   11, 0x0a,
+-     448,   11,   11,   11, 0x0a,
+-     465,   11,   11,   11, 0x0a,
+-     483,   11,   11,   11, 0x0a,
+-     504,   11,   11,   11, 0x0a,
+-     529,  526,   11,   11, 0x0a,
+-     548,   11,   11,   11, 0x0a,
+-     563,   11,   11,   11, 0x0a,
+-     574,   11,   11,   11, 0x0a,
+-     584,   11,   11,   11, 0x0a,
+-     604,   11,   11,   11, 0x0a,
+-     633,  617,   11,   11, 0x0a,
+-     660,   11,   11,   11, 0x0a,
+-     685,   11,   11,   11, 0x0a,
+-     712,   11,  707,   11, 0x0a,
+-     731,   11,   11,   11, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_MainWindow[] = {
+-    "MainWindow\0\0changedMusicFolder(QString)\0"
+-    "zoomInPressed()\0zoomOutPressed()\0"
+-    "openFile()\0filename\0openFile(const char*)\0"
+-    "openRecord()\0openPlayRecord()\0andPlay\0"
+-    "openRecord(bool)\0closeAllWidgets()\0"
+-    "event\0closeEvent(QCloseEvent*)\0"
+-    "menuPreferences()\0windowMenuAboutToShow()\0"
+-    "id\0windowMenuActivated(int)\0"
+-    "newViewAboutToShow()\0QWidget*\0viewID\0"
+-    "openView(int)\0t\0setTimeLabel(double)\0"
+-    "setChunkLabel()\0setNoteLabel()\0min_,max_\0"
+-    "setTimeRange(double,double)\0rewindPressed()\0"
+-    "rewindReleased()\0playStopClicked()\0"
+-    "fastforwardPressed()\0fastforwardReleased()\0"
+-    "ch\0setTitle(Channel*)\0aboutTartini()\0"
+-    "aboutGPL()\0aboutQt()\0showDocumentation()\0"
+-    "printPitch()\0type,typeString\0"
+-    "exportChannel(int,QString)\0"
+-    "exportChannelPlainText()\0exportChannelMatlab()\0"
+-    "bool\0loadViewGeometry()\0saveViewGeometry()\0"
+-};
+-
+-const QMetaObject MainWindow::staticMetaObject = {
+-    { &QMainWindow::staticMetaObject, qt_meta_stringdata_MainWindow,
+-      qt_meta_data_MainWindow, 0 }
+-};
+-
+-const QMetaObject *MainWindow::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *MainWindow::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_MainWindow))
+-	return static_cast<void*>(const_cast< MainWindow*>(this));
+-    return QMainWindow::qt_metacast(_clname);
+-}
+-
+-int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QMainWindow::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: changedMusicFolder((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+-        case 1: zoomInPressed(); break;
+-        case 2: zoomOutPressed(); break;
+-        case 3: openFile(); break;
+-        case 4: openFile((*reinterpret_cast< const char*(*)>(_a[1]))); break;
+-        case 5: openRecord(); break;
+-        case 6: openPlayRecord(); break;
+-        case 7: openRecord((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 8: closeAllWidgets(); break;
+-        case 9: closeEvent((*reinterpret_cast< QCloseEvent*(*)>(_a[1]))); break;
+-        case 10: menuPreferences(); break;
+-        case 11: windowMenuAboutToShow(); break;
+-        case 12: windowMenuActivated((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 13: newViewAboutToShow(); break;
+-        case 14: { QWidget* _r = openView((*reinterpret_cast< int(*)>(_a[1])));
+-            if (_a[0]) *reinterpret_cast< QWidget**>(_a[0]) = _r; }  break;
+-        case 15: setTimeLabel((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 16: setChunkLabel(); break;
+-        case 17: setNoteLabel(); break;
+-        case 18: setTimeRange((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+-        case 19: rewindPressed(); break;
+-        case 20: rewindReleased(); break;
+-        case 21: playStopClicked(); break;
+-        case 22: fastforwardPressed(); break;
+-        case 23: fastforwardReleased(); break;
+-        case 24: setTitle((*reinterpret_cast< Channel*(*)>(_a[1]))); break;
+-        case 25: aboutTartini(); break;
+-        case 26: aboutGPL(); break;
+-        case 27: aboutQt(); break;
+-        case 28: showDocumentation(); break;
+-        case 29: printPitch(); break;
+-        case 30: exportChannel((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2]))); break;
+-        case 31: exportChannelPlainText(); break;
+-        case 32: exportChannelMatlab(); break;
+-        case 33: { bool _r = loadViewGeometry();
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        case 34: saveViewGeometry(); break;
+-        }
+-        _id -= 35;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void MainWindow::changedMusicFolder(const QString & _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void MainWindow::zoomInPressed()
+-{
+-    QMetaObject::activate(this, &staticMetaObject, 1, 0);
+-}
+-
+-// SIGNAL 2
+-void MainWindow::zoomOutPressed()
+-{
+-    QMetaObject::activate(this, &staticMetaObject, 2, 0);
+-}
+-static const uint qt_meta_data_TartiniDialog[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_TartiniDialog[] = {
+-    "TartiniDialog\0"
+-};
+-
+-const QMetaObject TartiniDialog::staticMetaObject = {
+-    { &QDialog::staticMetaObject, qt_meta_stringdata_TartiniDialog,
+-      qt_meta_data_TartiniDialog, 0 }
+-};
+-
+-const QMetaObject *TartiniDialog::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *TartiniDialog::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_TartiniDialog))
+-	return static_cast<void*>(const_cast< TartiniDialog*>(this));
+-    return QDialog::qt_metacast(_clname);
+-}
+-
+-int TartiniDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QDialog::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+-static const uint qt_meta_data_GPLDialog[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_GPLDialog[] = {
+-    "GPLDialog\0"
+-};
+-
+-const QMetaObject GPLDialog::staticMetaObject = {
+-    { &QDialog::staticMetaObject, qt_meta_stringdata_GPLDialog,
+-      qt_meta_data_GPLDialog, 0 }
+-};
+-
+-const QMetaObject *GPLDialog::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *GPLDialog::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_GPLDialog))
+-	return static_cast<void*>(const_cast< GPLDialog*>(this));
+-    return QDialog::qt_metacast(_clname);
+-}
+-
+-int GPLDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QDialog::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_myscrollbar.cpp b/.moc/moc_myscrollbar.cpp
+deleted file mode 100644
+index 201bebc..0000000
+--- a/.moc/moc_myscrollbar.cpp
++++ /dev/null
+@@ -1,118 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'myscrollbar.h'
+-**
+-** Created: Thu Jun 21 21:45:39 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/myscrollbar.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'myscrollbar.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_MyScrollBar[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-      13,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      20,   13,   12,   12, 0x05,
+-      41,   13,   12,   12, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      71,   61,   12,   12, 0x0a,
+-     101,   91,   12,   12, 0x0a,
+-     141,  121,   12,   12, 0x0a,
+-     175,  165,   12,   12, 0x0a,
+-     205,  195,   12,   12, 0x0a,
+-     225,   13,   12,   12, 0x0a,
+-     248,  242,   12,   12, 0x0a,
+-     265,  242,   12,   12, 0x0a,
+-     283,   12,   12,   12, 0x0a,
+-     304,  298,   12,   12, 0x0a,
+-     327,  320,   12,   12, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_MyScrollBar[] = {
+-    "MyScrollBar\0\0value_\0valueChanged(double)\0"
+-    "sliderMoved(double)\0minValue_\0"
+-    "setMinValue(double)\0maxValue_\0"
+-    "setMaxValue(double)\0minValue_,maxValue_\0"
+-    "setRange(double,double)\0lineStep_\0"
+-    "setLineStep(double)\0pageStep_\0"
+-    "setPageStep(double)\0setValue(double)\0"
+-    "value\0setIntValue(int)\0sliderMoving(int)\0"
+-    "sliderMoving()\0step_\0setStep(double)\0"
+-    "action\0actionTriggering(int)\0"
+-};
+-
+-const QMetaObject MyScrollBar::staticMetaObject = {
+-    { &QWidget::staticMetaObject, qt_meta_stringdata_MyScrollBar,
+-      qt_meta_data_MyScrollBar, 0 }
+-};
+-
+-const QMetaObject *MyScrollBar::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *MyScrollBar::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_MyScrollBar))
+-	return static_cast<void*>(const_cast< MyScrollBar*>(this));
+-    return QWidget::qt_metacast(_clname);
+-}
+-
+-int MyScrollBar::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: valueChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: sliderMoved((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: setMinValue((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: setMaxValue((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 4: setRange((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+-        case 5: setLineStep((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 6: setPageStep((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 7: setValue((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 8: setIntValue((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 9: sliderMoving((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 10: sliderMoving(); break;
+-        case 11: setStep((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 12: actionTriggering((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        }
+-        _id -= 13;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void MyScrollBar::valueChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void MyScrollBar::sliderMoved(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+diff --git a/.moc/moc_openfiles.cpp b/.moc/moc_openfiles.cpp
+deleted file mode 100644
+index d0ace30..0000000
+--- a/.moc/moc_openfiles.cpp
++++ /dev/null
+@@ -1,78 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'openfiles.h'
+-**
+-** Created: Thu Jun 21 21:45:39 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/openfiles/openfiles.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'openfiles.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_OpenFiles[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       4,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      11,   10,   10,   10, 0x0a,
+-      37,   32,   10,   10, 0x0a,
+-      70,   32,   10,   10, 0x0a,
+-     113,  106,   10,   10, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_OpenFiles[] = {
+-    "OpenFiles\0\0refreshChannelList()\0item\0"
+-    "listViewChanged(Q3ListViewItem*)\0"
+-    "slotCurrentChanged(Q3ListViewItem*)\0"
+-    "active\0slotActiveChannelChanged(Channel*)\0"
+-};
+-
+-const QMetaObject OpenFiles::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_OpenFiles,
+-      qt_meta_data_OpenFiles, 0 }
+-};
+-
+-const QMetaObject *OpenFiles::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *OpenFiles::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_OpenFiles))
+-	return static_cast<void*>(const_cast< OpenFiles*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int OpenFiles::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: refreshChannelList(); break;
+-        case 1: listViewChanged((*reinterpret_cast< Q3ListViewItem*(*)>(_a[1]))); break;
+-        case 2: slotCurrentChanged((*reinterpret_cast< Q3ListViewItem*(*)>(_a[1]))); break;
+-        case 3: slotActiveChannelChanged((*reinterpret_cast< Channel*(*)>(_a[1]))); break;
+-        }
+-        _id -= 4;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_pianoview.cpp b/.moc/moc_pianoview.cpp
+deleted file mode 100644
+index d312d24..0000000
+--- a/.moc/moc_pianoview.cpp
++++ /dev/null
+@@ -1,69 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'pianoview.h'
+-**
+-** Created: Thu Jun 21 21:45:53 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/piano/pianoview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'pianoview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_PianoView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       1,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      11,   10,   10,   10, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_PianoView[] = {
+-    "PianoView\0\0changeKey()\0"
+-};
+-
+-const QMetaObject PianoView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_PianoView,
+-      qt_meta_data_PianoView, 0 }
+-};
+-
+-const QMetaObject *PianoView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *PianoView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_PianoView))
+-	return static_cast<void*>(const_cast< PianoView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int PianoView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: changeKey(); break;
+-        }
+-        _id -= 1;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_pitchcompassdrawwidget.cpp b/.moc/moc_pitchcompassdrawwidget.cpp
+deleted file mode 100644
+index 5c2f0b1..0000000
+--- a/.moc/moc_pitchcompassdrawwidget.cpp
++++ /dev/null
+@@ -1,70 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'pitchcompassdrawwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:42 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/pitchcompass/pitchcompassdrawwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'pitchcompassdrawwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_PitchCompassDrawWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       1,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      29,   24,   23,   23, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_PitchCompassDrawWidget[] = {
+-    "PitchCompassDrawWidget\0\0time\0"
+-    "updateCompass(double)\0"
+-};
+-
+-const QMetaObject PitchCompassDrawWidget::staticMetaObject = {
+-    { &QWidget::staticMetaObject, qt_meta_stringdata_PitchCompassDrawWidget,
+-      qt_meta_data_PitchCompassDrawWidget, 0 }
+-};
+-
+-const QMetaObject *PitchCompassDrawWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *PitchCompassDrawWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_PitchCompassDrawWidget))
+-	return static_cast<void*>(const_cast< PitchCompassDrawWidget*>(this));
+-    return QWidget::qt_metacast(_clname);
+-}
+-
+-int PitchCompassDrawWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: updateCompass((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 1;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_pitchcompassview.cpp b/.moc/moc_pitchcompassview.cpp
+deleted file mode 100644
+index 5ac792d..0000000
+--- a/.moc/moc_pitchcompassview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'pitchcompassview.h'
+-**
+-** Created: Thu Jun 21 21:45:42 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/pitchcompass/pitchcompassview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'pitchcompassview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_PitchCompassView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_PitchCompassView[] = {
+-    "PitchCompassView\0"
+-};
+-
+-const QMetaObject PitchCompassView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_PitchCompassView,
+-      qt_meta_data_PitchCompassView, 0 }
+-};
+-
+-const QMetaObject *PitchCompassView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *PitchCompassView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_PitchCompassView))
+-	return static_cast<void*>(const_cast< PitchCompassView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int PitchCompassView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_scoreview.cpp b/.moc/moc_scoreview.cpp
+deleted file mode 100644
+index 5019e2f..0000000
+--- a/.moc/moc_scoreview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'scoreview.h'
+-**
+-** Created: Thu Jun 21 21:45:58 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/score/scoreview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'scoreview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_ScoreView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_ScoreView[] = {
+-    "ScoreView\0"
+-};
+-
+-const QMetaObject ScoreView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_ScoreView,
+-      qt_meta_data_ScoreView, 0 }
+-};
+-
+-const QMetaObject *ScoreView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *ScoreView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_ScoreView))
+-	return static_cast<void*>(const_cast< ScoreView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int ScoreView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_scorewidget.cpp b/.moc/moc_scorewidget.cpp
+deleted file mode 100644
+index caec203..0000000
+--- a/.moc/moc_scorewidget.cpp
++++ /dev/null
+@@ -1,87 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'scorewidget.h'
+-**
+-** Created: Thu Jun 21 21:45:58 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/score/scorewidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'scorewidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_ScoreWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       8,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      15,   13,   12,   12, 0x0a,
+-      35,   33,   12,   12, 0x0a,
+-      58,   53,   12,   12, 0x0a,
+-      77,   53,   12,   12, 0x0a,
+-      95,   53,   12,   12, 0x0a,
+-     112,   53,   12,   12, 0x0a,
+-     137,  131,   12,   12, 0x0a,
+-     160,   53,   12,   12, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_ScoreWidget[] = {
+-    "ScoreWidget\0\0x\0setScaleX(double)\0y\0"
+-    "setScaleY(double)\0mode\0setSharpsMode(int)\0"
+-    "setNotesMode(int)\0setClefMode(int)\0"
+-    "setOpaqueMode(int)\0index\0"
+-    "setTransposeLevel(int)\0setShowAllMode(int)\0"
+-};
+-
+-const QMetaObject ScoreWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_ScoreWidget,
+-      qt_meta_data_ScoreWidget, 0 }
+-};
+-
+-const QMetaObject *ScoreWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *ScoreWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_ScoreWidget))
+-	return static_cast<void*>(const_cast< ScoreWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int ScoreWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: setScaleX((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: setScaleY((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: setSharpsMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 3: setNotesMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 4: setClefMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 5: setOpaqueMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 6: setTransposeLevel((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 7: setShowAllMode((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        }
+-        _id -= 8;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_summarydrawwidget.cpp b/.moc/moc_summarydrawwidget.cpp
+deleted file mode 100644
+index 9896305..0000000
+--- a/.moc/moc_summarydrawwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'summarydrawwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:43 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/summary/summarydrawwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'summarydrawwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_SummaryDrawWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_SummaryDrawWidget[] = {
+-    "SummaryDrawWidget\0"
+-};
+-
+-const QMetaObject SummaryDrawWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_SummaryDrawWidget,
+-      qt_meta_data_SummaryDrawWidget, 0 }
+-};
+-
+-const QMetaObject *SummaryDrawWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *SummaryDrawWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_SummaryDrawWidget))
+-	return static_cast<void*>(const_cast< SummaryDrawWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int SummaryDrawWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_summaryview.cpp b/.moc/moc_summaryview.cpp
+deleted file mode 100644
+index 81949c8..0000000
+--- a/.moc/moc_summaryview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'summaryview.h'
+-**
+-** Created: Thu Jun 21 21:45:43 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/summary/summaryview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'summaryview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_SummaryView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_SummaryView[] = {
+-    "SummaryView\0"
+-};
+-
+-const QMetaObject SummaryView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_SummaryView,
+-      qt_meta_data_SummaryView, 0 }
+-};
+-
+-const QMetaObject *SummaryView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *SummaryView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_SummaryView))
+-	return static_cast<void*>(const_cast< SummaryView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int SummaryView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_tartinisettingsdialog.cpp b/.moc/moc_tartinisettingsdialog.cpp
+deleted file mode 100644
+index ddb97cb..0000000
+--- a/.moc/moc_tartinisettingsdialog.cpp
++++ /dev/null
+@@ -1,101 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'tartinisettingsdialog.h'
+-**
+-** Created: Thu Jun 21 21:45:59 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../dialogs/tartinisettingsdialog.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'tartinisettingsdialog.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_TartiniSettingsDialog[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-      12,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      43,   31,   23,   22, 0x0a,
+-      60,   22,   22,   22, 0x0a,
+-      79,   22,   22,   22, 0x0a,
+-      97,   22,   22,   22, 0x0a,
+-     118,   22,   22,   22, 0x0a,
+-     137,   22,   22,   22, 0x0a,
+-     166,  156,   22,   22, 0x0a,
+-     196,   22,   22,   22, 0x0a,
+-     211,   22,   22,   22, 0x0a,
+-     241,  234,   22,   22, 0x0a,
+-     266,  264,   22,   22, 0x0a,
+-     299,   22,   22,   22, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_TartiniSettingsDialog[] = {
+-    "TartiniSettingsDialog\0\0QString\0"
+-    "initialPath\0getPath(QString)\0"
+-    "changeTempFolder()\0fileNameChanged()\0"
+-    "getBackgroundColor()\0getShading1Color()\0"
+-    "getShading2Color()\0obj,group\0"
+-    "saveSetting(QObject*,QString)\0"
+-    "saveSettings()\0checkAnalysisEnabled()\0"
+-    "choice\0onNoteRangeChoice(int)\0s\0"
+-    "setUnknownsToDefault(QSettings*)\0"
+-    "resetDefaults()\0"
+-};
+-
+-const QMetaObject TartiniSettingsDialog::staticMetaObject = {
+-    { &QDialog::staticMetaObject, qt_meta_stringdata_TartiniSettingsDialog,
+-      qt_meta_data_TartiniSettingsDialog, 0 }
+-};
+-
+-const QMetaObject *TartiniSettingsDialog::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *TartiniSettingsDialog::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_TartiniSettingsDialog))
+-	return static_cast<void*>(const_cast< TartiniSettingsDialog*>(this));
+-    return QDialog::qt_metacast(_clname);
+-}
+-
+-int TartiniSettingsDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QDialog::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: { QString _r = getPath((*reinterpret_cast< const QString(*)>(_a[1])));
+-            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
+-        case 1: changeTempFolder(); break;
+-        case 2: fileNameChanged(); break;
+-        case 3: getBackgroundColor(); break;
+-        case 4: getShading1Color(); break;
+-        case 5: getShading2Color(); break;
+-        case 6: saveSetting((*reinterpret_cast< QObject*(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+-        case 7: saveSettings(); break;
+-        case 8: checkAnalysisEnabled(); break;
+-        case 9: onNoteRangeChoice((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 10: setUnknownsToDefault((*reinterpret_cast< QSettings*(*)>(_a[1]))); break;
+-        case 11: resetDefaults(); break;
+-        }
+-        _id -= 12;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_timeaxis.cpp b/.moc/moc_timeaxis.cpp
+deleted file mode 100644
+index d380c36..0000000
+--- a/.moc/moc_timeaxis.cpp
++++ /dev/null
+@@ -1,75 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'timeaxis.h'
+-**
+-** Created: Thu Jun 21 21:45:50 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/timeaxis.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'timeaxis.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_TimeAxis[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       3,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      15,   10,    9,    9, 0x0a,
+-      35,   10,    9,    9, 0x0a,
+-      77,   56,    9,    9, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_TimeAxis[] = {
+-    "TimeAxis\0\0time\0setLeftTime(double)\0"
+-    "setRightTime(double)\0leftTime_,rightTime_\0"
+-    "setRange(double,double)\0"
+-};
+-
+-const QMetaObject TimeAxis::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_TimeAxis,
+-      qt_meta_data_TimeAxis, 0 }
+-};
+-
+-const QMetaObject *TimeAxis::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *TimeAxis::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_TimeAxis))
+-	return static_cast<void*>(const_cast< TimeAxis*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int TimeAxis::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: setLeftTime((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: setRightTime((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: setRange((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+-        }
+-        _id -= 3;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_tunerview.cpp b/.moc/moc_tunerview.cpp
+deleted file mode 100644
+index f9c2a65..0000000
+--- a/.moc/moc_tunerview.cpp
++++ /dev/null
+@@ -1,74 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'tunerview.h'
+-**
+-** Created: Thu Jun 21 21:45:44 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/tuner/tunerview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'tunerview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_TunerView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       3,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      16,   11,   10,   10, 0x0a,
+-      59,   47,   10,   10, 0x0a,
+-      76,   10,   10,   10, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_TunerView[] = {
+-    "TunerView\0\0time\0slotCurrentTimeChanged(double)\0"
+-    "index,value\0setLed(int,bool)\0doUpdate()\0"
+-};
+-
+-const QMetaObject TunerView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_TunerView,
+-      qt_meta_data_TunerView, 0 }
+-};
+-
+-const QMetaObject *TunerView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *TunerView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_TunerView))
+-	return static_cast<void*>(const_cast< TunerView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int TunerView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: slotCurrentTimeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: setLed((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+-        case 2: doUpdate(); break;
+-        }
+-        _id -= 3;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_tunerwidget.cpp b/.moc/moc_tunerwidget.cpp
+deleted file mode 100644
+index cb53694..0000000
+--- a/.moc/moc_tunerwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'tunerwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:44 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/tuner/tunerwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'tunerwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_TunerWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_TunerWidget[] = {
+-    "TunerWidget\0"
+-};
+-
+-const QMetaObject TunerWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_TunerWidget,
+-      qt_meta_data_TunerWidget, 0 }
+-};
+-
+-const QMetaObject *TunerWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *TunerWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_TunerWidget))
+-	return static_cast<void*>(const_cast< TunerWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int TunerWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_vibratocirclewidget.cpp b/.moc/moc_vibratocirclewidget.cpp
+deleted file mode 100644
+index ebed91a..0000000
+--- a/.moc/moc_vibratocirclewidget.cpp
++++ /dev/null
+@@ -1,74 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratocirclewidget.h'
+-**
+-** Created: Thu Jun 21 21:46:02 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratocirclewidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratocirclewidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoCircleWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       3,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      21,   20,   20,   20, 0x0a,
+-      38,   32,   20,   20, 0x0a,
+-      55,   32,   20,   20, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoCircleWidget[] = {
+-    "VibratoCircleWidget\0\0doUpdate()\0value\0"
+-    "setAccuracy(int)\0setType(int)\0"
+-};
+-
+-const QMetaObject VibratoCircleWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_VibratoCircleWidget,
+-      qt_meta_data_VibratoCircleWidget, 0 }
+-};
+-
+-const QMetaObject *VibratoCircleWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoCircleWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoCircleWidget))
+-	return static_cast<void*>(const_cast< VibratoCircleWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoCircleWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: doUpdate(); break;
+-        case 1: setAccuracy((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 2: setType((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        }
+-        _id -= 3;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_vibratoperiodwidget.cpp b/.moc/moc_vibratoperiodwidget.cpp
+deleted file mode 100644
+index a61766a..0000000
+--- a/.moc/moc_vibratoperiodwidget.cpp
++++ /dev/null
+@@ -1,85 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratoperiodwidget.h'
+-**
+-** Created: Thu Jun 21 21:46:01 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratoperiodwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratoperiodwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoPeriodWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       7,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      21,   20,   20,   20, 0x0a,
+-      38,   32,   20,   20, 0x0a,
+-      63,   32,   20,   20, 0x0a,
+-      90,   32,   20,   20, 0x0a,
+-     109,   32,   20,   20, 0x0a,
+-     134,   32,   20,   20, 0x0a,
+-     157,   32,   20,   20, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoPeriodWidget[] = {
+-    "VibratoPeriodWidget\0\0doUpdate()\0value\0"
+-    "setSmoothedPeriods(bool)\0"
+-    "setDrawSineReference(bool)\0"
+-    "setSineStyle(bool)\0setDrawPrevPeriods(bool)\0"
+-    "setPeriodScaling(bool)\0setDrawComparison(bool)\0"
+-};
+-
+-const QMetaObject VibratoPeriodWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_VibratoPeriodWidget,
+-      qt_meta_data_VibratoPeriodWidget, 0 }
+-};
+-
+-const QMetaObject *VibratoPeriodWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoPeriodWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoPeriodWidget))
+-	return static_cast<void*>(const_cast< VibratoPeriodWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoPeriodWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: doUpdate(); break;
+-        case 1: setSmoothedPeriods((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 2: setDrawSineReference((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 3: setSineStyle((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 4: setDrawPrevPeriods((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 5: setPeriodScaling((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 6: setDrawComparison((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        }
+-        _id -= 7;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_vibratospeedwidget.cpp b/.moc/moc_vibratospeedwidget.cpp
+deleted file mode 100644
+index 97a827f..0000000
+--- a/.moc/moc_vibratospeedwidget.cpp
++++ /dev/null
+@@ -1,72 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratospeedwidget.h'
+-**
+-** Created: Thu Jun 21 21:46:01 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratospeedwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratospeedwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoSpeedWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       2,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      20,   19,   19,   19, 0x0a,
+-      37,   31,   19,   19, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoSpeedWidget[] = {
+-    "VibratoSpeedWidget\0\0doUpdate()\0value\0"
+-    "setUseProny(bool)\0"
+-};
+-
+-const QMetaObject VibratoSpeedWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_VibratoSpeedWidget,
+-      qt_meta_data_VibratoSpeedWidget, 0 }
+-};
+-
+-const QMetaObject *VibratoSpeedWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoSpeedWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoSpeedWidget))
+-	return static_cast<void*>(const_cast< VibratoSpeedWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoSpeedWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: doUpdate(); break;
+-        case 1: setUseProny((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        }
+-        _id -= 2;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_vibratotimeaxis.cpp b/.moc/moc_vibratotimeaxis.cpp
+deleted file mode 100644
+index 6a1b9be..0000000
+--- a/.moc/moc_vibratotimeaxis.cpp
++++ /dev/null
+@@ -1,72 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratotimeaxis.h'
+-**
+-** Created: Thu Jun 21 21:46:01 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratotimeaxis.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratotimeaxis.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoTimeAxis[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       2,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      17,   16,   16,   16, 0x0a,
+-      30,   28,   16,   16, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoTimeAxis[] = {
+-    "VibratoTimeAxis\0\0doUpdate()\0x\0"
+-    "setZoomFactorX(double)\0"
+-};
+-
+-const QMetaObject VibratoTimeAxis::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_VibratoTimeAxis,
+-      qt_meta_data_VibratoTimeAxis, 0 }
+-};
+-
+-const QMetaObject *VibratoTimeAxis::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoTimeAxis::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoTimeAxis))
+-	return static_cast<void*>(const_cast< VibratoTimeAxis*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoTimeAxis::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: doUpdate(); break;
+-        case 1: setZoomFactorX((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 2;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_vibratotunerwidget.cpp b/.moc/moc_vibratotunerwidget.cpp
+deleted file mode 100644
+index 7161685..0000000
+--- a/.moc/moc_vibratotunerwidget.cpp
++++ /dev/null
+@@ -1,81 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratotunerwidget.h'
+-**
+-** Created: Thu Jun 21 21:46:00 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratotunerwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratotunerwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoTunerWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       2,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      32,   20,   19,   19, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      58,   49,   19,   19, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoTunerWidget[] = {
+-    "VibratoTunerWidget\0\0index,value\0"
+-    "ledSet(int,bool)\0thePitch\0doUpdate(double)\0"
+-};
+-
+-const QMetaObject VibratoTunerWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_VibratoTunerWidget,
+-      qt_meta_data_VibratoTunerWidget, 0 }
+-};
+-
+-const QMetaObject *VibratoTunerWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoTunerWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoTunerWidget))
+-	return static_cast<void*>(const_cast< VibratoTunerWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoTunerWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: ledSet((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+-        case 1: doUpdate((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 2;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void VibratoTunerWidget::ledSet(int _t1, bool _t2)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+diff --git a/.moc/moc_vibratoview.cpp b/.moc/moc_vibratoview.cpp
+deleted file mode 100644
+index dc85582..0000000
+--- a/.moc/moc_vibratoview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratoview.h'
+-**
+-** Created: Thu Jun 21 21:46:00 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratoview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratoview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoView[] = {
+-    "VibratoView\0"
+-};
+-
+-const QMetaObject VibratoView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_VibratoView,
+-      qt_meta_data_VibratoView, 0 }
+-};
+-
+-const QMetaObject *VibratoView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoView))
+-	return static_cast<void*>(const_cast< VibratoView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_vibratowidget.cpp b/.moc/moc_vibratowidget.cpp
+deleted file mode 100644
+index 9d91952..0000000
+--- a/.moc/moc_vibratowidget.cpp
++++ /dev/null
+@@ -1,78 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'vibratowidget.h'
+-**
+-** Created: Thu Jun 21 21:45:59 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/vibrato/vibratowidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'vibratowidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VibratoWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       4,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // slots: signature, parameters, type, tag, flags
+-      15,   14,   14,   14, 0x0a,
+-      28,   26,   14,   14, 0x0a,
+-      53,   51,   14,   14, 0x0a,
+-      82,   76,   14,   14, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VibratoWidget[] = {
+-    "VibratoWidget\0\0doUpdate()\0x\0"
+-    "setZoomFactorX(double)\0y\0"
+-    "setZoomFactorY(double)\0value\0"
+-    "setOffsetY(int)\0"
+-};
+-
+-const QMetaObject VibratoWidget::staticMetaObject = {
+-    { &QGLWidget::staticMetaObject, qt_meta_stringdata_VibratoWidget,
+-      qt_meta_data_VibratoWidget, 0 }
+-};
+-
+-const QMetaObject *VibratoWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VibratoWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VibratoWidget))
+-	return static_cast<void*>(const_cast< VibratoWidget*>(this));
+-    return QGLWidget::qt_metacast(_clname);
+-}
+-
+-int VibratoWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QGLWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: doUpdate(); break;
+-        case 1: setZoomFactorX((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: setZoomFactorY((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 3: setOffsetY((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        }
+-        _id -= 4;
+-    }
+-    return _id;
+-}
+diff --git a/.moc/moc_view.cpp b/.moc/moc_view.cpp
+deleted file mode 100644
+index f6cbe68..0000000
+--- a/.moc/moc_view.cpp
++++ /dev/null
+@@ -1,255 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'view.h'
+-**
+-** Created: Thu Jun 21 21:45:50 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../global/view.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'view.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_View[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-      33,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      19,    6,    5,    5, 0x05,
+-      40,    6,    5,    5, 0x05,
+-      61,    5,    5,    5, 0x05,
+-      77,   75,    5,    5, 0x05,
+-     104,   75,    5,    5, 0x05,
+-     131,   75,    5,    5, 0x05,
+-     157,   75,    5,    5, 0x05,
+-     182,   75,    5,    5, 0x05,
+-     208,   75,    5,    5, 0x05,
+-     231,   75,    5,    5, 0x05,
+-     252,   75,    5,    5, 0x05,
+-     294,  273,    5,    5, 0x05,
+-     330,   75,    5,    5, 0x05,
+-     354,   75,    5,    5, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-     378,    5,    5,    5, 0x0a,
+-     389,    5,    5,    5, 0x0a,
+-     404,    5,    5,    5, 0x0a,
+-     419,    5,    5,    5, 0x0a,
+-     431,    5,    5,    5, 0x0a,
+-     448,    5,    5,    5, 0x0a,
+-     465,   75,    5,    5, 0x0a,
+-     491,   75,    5,    5, 0x0a,
+-     514,   75,    5,    5, 0x0a,
+-     536,  534,    5,    5, 0x0a,
+-     556,   75,    5,    5, 0x0a,
+-     588,  579,    5,    5, 0x0a,
+-     615,  534,    5,    5, 0x0a,
+-     647,  638,    5,    5, 0x0a,
+-     674,    5,    5,    5, 0x0a,
+-     697,    5,  692,    5, 0x0a,
+-     710,    5,    5,    5, 0x0a,
+-     730,    5,    5,    5, 0x0a,
+-     757,    5,  692,    5, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_View[] = {
+-    "View\0\0currentTime_\0onSlowUpdate(double)\0"
+-    "onFastUpdate(double)\0viewChanged()\0x\0"
+-    "scrollableYChanged(double)\0"
+-    "currentTimeChanged(double)\0"
+-    "viewBottomChanged(double)\0"
+-    "viewWidthChanged(double)\0"
+-    "viewHeightChanged(double)\0"
+-    "viewOffsetChanged(int)\0zoomXChanged(double)\0"
+-    "zoomYChanged(double)\0leftView_,rightView_\0"
+-    "timeViewRangeChanged(double,double)\0"
+-    "logZoomXChanged(double)\0logZoomYChanged(double)\0"
+-    "doUpdate()\0doSlowUpdate()\0doFastUpdate()\0"
+-    "newUpdate()\0nextFastUpdate()\0"
+-    "nextSlowUpdate()\0setCurrentTimeRaw(double)\0"
+-    "setCurrentTime(double)\0changeViewX(double)\0"
+-    "y\0changeViewY(double)\0setZoomFactorX(double)\0"
+-    "x,fixedX\0setZoomFactorX(double,int)\0"
+-    "setZoomFactorY(double)\0y,fixedY\0"
+-    "setZoomFactorY(double,int)\0doAutoFollowing()\0"
+-    "bool\0autoFollow()\0setAutoFollow(bool)\0"
+-    "setBackgroundShading(bool)\0"
+-    "backgroundShading()\0"
+-};
+-
+-const QMetaObject View::staticMetaObject = {
+-    { &QObject::staticMetaObject, qt_meta_stringdata_View,
+-      qt_meta_data_View, 0 }
+-};
+-
+-const QMetaObject *View::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *View::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_View))
+-	return static_cast<void*>(const_cast< View*>(this));
+-    return QObject::qt_metacast(_clname);
+-}
+-
+-int View::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QObject::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: onSlowUpdate((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: onFastUpdate((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 2: viewChanged(); break;
+-        case 3: scrollableYChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 4: currentTimeChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 5: viewBottomChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 6: viewWidthChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 7: viewHeightChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 8: viewOffsetChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+-        case 9: zoomXChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 10: zoomYChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 11: timeViewRangeChanged((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
+-        case 12: logZoomXChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 13: logZoomYChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 14: doUpdate(); break;
+-        case 15: doSlowUpdate(); break;
+-        case 16: doFastUpdate(); break;
+-        case 17: newUpdate(); break;
+-        case 18: nextFastUpdate(); break;
+-        case 19: nextSlowUpdate(); break;
+-        case 20: setCurrentTimeRaw((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 21: setCurrentTime((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 22: changeViewX((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 23: changeViewY((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 24: setZoomFactorX((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 25: setZoomFactorX((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+-        case 26: setZoomFactorY((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 27: setZoomFactorY((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+-        case 28: doAutoFollowing(); break;
+-        case 29: { bool _r = autoFollow();
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        case 30: setAutoFollow((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 31: setBackgroundShading((*reinterpret_cast< bool(*)>(_a[1]))); break;
+-        case 32: { bool _r = backgroundShading();
+-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = _r; }  break;
+-        }
+-        _id -= 33;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void View::onSlowUpdate(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-
+-// SIGNAL 1
+-void View::onFastUpdate(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+-}
+-
+-// SIGNAL 2
+-void View::viewChanged()
+-{
+-    QMetaObject::activate(this, &staticMetaObject, 2, 0);
+-}
+-
+-// SIGNAL 3
+-void View::scrollableYChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 3, _a);
+-}
+-
+-// SIGNAL 4
+-void View::currentTimeChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 4, _a);
+-}
+-
+-// SIGNAL 5
+-void View::viewBottomChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 5, _a);
+-}
+-
+-// SIGNAL 6
+-void View::viewWidthChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 6, _a);
+-}
+-
+-// SIGNAL 7
+-void View::viewHeightChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 7, _a);
+-}
+-
+-// SIGNAL 8
+-void View::viewOffsetChanged(int _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 8, _a);
+-}
+-
+-// SIGNAL 9
+-void View::zoomXChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 9, _a);
+-}
+-
+-// SIGNAL 10
+-void View::zoomYChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 10, _a);
+-}
+-
+-// SIGNAL 11
+-void View::timeViewRangeChanged(double _t1, double _t2)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)) };
+-    QMetaObject::activate(this, &staticMetaObject, 11, _a);
+-}
+-
+-// SIGNAL 12
+-void View::logZoomXChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 12, _a);
+-}
+-
+-// SIGNAL 13
+-void View::logZoomYChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 13, _a);
+-}
+diff --git a/.moc/moc_viewwidget.cpp b/.moc/moc_viewwidget.cpp
+deleted file mode 100644
+index 61c5f5b..0000000
+--- a/.moc/moc_viewwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'viewwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:38 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/viewwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'viewwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_ViewWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_ViewWidget[] = {
+-    "ViewWidget\0"
+-};
+-
+-const QMetaObject ViewWidget::staticMetaObject = {
+-    { &QWidget::staticMetaObject, qt_meta_stringdata_ViewWidget,
+-      qt_meta_data_ViewWidget, 0 }
+-};
+-
+-const QMetaObject *ViewWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *ViewWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_ViewWidget))
+-	return static_cast<void*>(const_cast< ViewWidget*>(this));
+-    return QWidget::qt_metacast(_clname);
+-}
+-
+-int ViewWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = QWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_volumemeterview.cpp b/.moc/moc_volumemeterview.cpp
+deleted file mode 100644
+index 61516dc..0000000
+--- a/.moc/moc_volumemeterview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'volumemeterview.h'
+-**
+-** Created: Thu Jun 21 21:45:51 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/volumemeter/volumemeterview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'volumemeterview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VolumeMeterView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VolumeMeterView[] = {
+-    "VolumeMeterView\0"
+-};
+-
+-const QMetaObject VolumeMeterView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_VolumeMeterView,
+-      qt_meta_data_VolumeMeterView, 0 }
+-};
+-
+-const QMetaObject *VolumeMeterView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VolumeMeterView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VolumeMeterView))
+-	return static_cast<void*>(const_cast< VolumeMeterView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int VolumeMeterView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_volumemeterwidget.cpp b/.moc/moc_volumemeterwidget.cpp
+deleted file mode 100644
+index 4f83337..0000000
+--- a/.moc/moc_volumemeterwidget.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'volumemeterwidget.h'
+-**
+-** Created: Thu Jun 21 21:45:51 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/volumemeter/volumemeterwidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'volumemeterwidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_VolumeMeterWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_VolumeMeterWidget[] = {
+-    "VolumeMeterWidget\0"
+-};
+-
+-const QMetaObject VolumeMeterWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_VolumeMeterWidget,
+-      qt_meta_data_VolumeMeterWidget, 0 }
+-};
+-
+-const QMetaObject *VolumeMeterWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *VolumeMeterWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_VolumeMeterWidget))
+-	return static_cast<void*>(const_cast< VolumeMeterWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int VolumeMeterWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_waveview.cpp b/.moc/moc_waveview.cpp
+deleted file mode 100644
+index 4d1e25a..0000000
+--- a/.moc/moc_waveview.cpp
++++ /dev/null
+@@ -1,60 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'waveview.h'
+-**
+-** Created: Thu Jun 21 21:45:48 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/wave/waveview.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'waveview.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_WaveView[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       0,    0, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_WaveView[] = {
+-    "WaveView\0"
+-};
+-
+-const QMetaObject WaveView::staticMetaObject = {
+-    { &ViewWidget::staticMetaObject, qt_meta_stringdata_WaveView,
+-      qt_meta_data_WaveView, 0 }
+-};
+-
+-const QMetaObject *WaveView::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *WaveView::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_WaveView))
+-	return static_cast<void*>(const_cast< WaveView*>(this));
+-    return ViewWidget::qt_metacast(_clname);
+-}
+-
+-int WaveView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = ViewWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    return _id;
+-}
+diff --git a/.moc/moc_wavewidget.cpp b/.moc/moc_wavewidget.cpp
+deleted file mode 100644
+index 2f93326..0000000
+--- a/.moc/moc_wavewidget.cpp
++++ /dev/null
+@@ -1,81 +0,0 @@
+-/****************************************************************************
+-** Meta object code from reading C++ file 'wavewidget.h'
+-**
+-** Created: Thu Jun 21 21:45:49 2007
+-**      by: The Qt Meta Object Compiler version 59 (Qt 4.2.3)
+-**
+-** WARNING! All changes made in this file will be lost!
+-*****************************************************************************/
+-
+-#include "../widgets/wave/wavewidget.h"
+-#if !defined(Q_MOC_OUTPUT_REVISION)
+-#error "The header file 'wavewidget.h' doesn't include <QObject>."
+-#elif Q_MOC_OUTPUT_REVISION != 59
+-#error "This file was generated using the moc from 4.2.3. It"
+-#error "cannot be used with the include files from this version of Qt."
+-#error "(The moc has changed too much.)"
+-#endif
+-
+-static const uint qt_meta_data_WaveWidget[] = {
+-
+- // content:
+-       1,       // revision
+-       0,       // classname
+-       0,    0, // classinfo
+-       2,   10, // methods
+-       0,    0, // properties
+-       0,    0, // enums/sets
+-
+- // signals: signature, parameters, type, tag, flags
+-      19,   12,   11,   11, 0x05,
+-
+- // slots: signature, parameters, type, tag, flags
+-      40,   12,   11,   11, 0x0a,
+-
+-       0        // eod
+-};
+-
+-static const char qt_meta_stringdata_WaveWidget[] = {
+-    "WaveWidget\0\0zoomY_\0zoomYChanged(double)\0"
+-    "setZoomY(double)\0"
+-};
+-
+-const QMetaObject WaveWidget::staticMetaObject = {
+-    { &DrawWidget::staticMetaObject, qt_meta_stringdata_WaveWidget,
+-      qt_meta_data_WaveWidget, 0 }
+-};
+-
+-const QMetaObject *WaveWidget::metaObject() const
+-{
+-    return &staticMetaObject;
+-}
+-
+-void *WaveWidget::qt_metacast(const char *_clname)
+-{
+-    if (!_clname) return 0;
+-    if (!strcmp(_clname, qt_meta_stringdata_WaveWidget))
+-	return static_cast<void*>(const_cast< WaveWidget*>(this));
+-    return DrawWidget::qt_metacast(_clname);
+-}
+-
+-int WaveWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+-{
+-    _id = DrawWidget::qt_metacall(_c, _id, _a);
+-    if (_id < 0)
+-        return _id;
+-    if (_c == QMetaObject::InvokeMetaMethod) {
+-        switch (_id) {
+-        case 0: zoomYChanged((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        case 1: setZoomY((*reinterpret_cast< double(*)>(_a[1]))); break;
+-        }
+-        _id -= 2;
+-    }
+-    return _id;
+-}
+-
+-// SIGNAL 0
+-void WaveWidget::zoomYChanged(double _t1)
+-{
+-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+-    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+-}
+-- 

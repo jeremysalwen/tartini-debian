@@ -1,0 +1,22 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Sat, 28 May 2011 03:18:18 -0400
+Subject: [PATCH] Made sure previous analysis succeeded before checking results.  Fixes segfault.
+
+---
+ general/mytransforms.cpp |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/general/mytransforms.cpp b/general/mytransforms.cpp
+index 4ef4774..e3c4cff 100644
+--- a/general/mytransforms.cpp
++++ b/general/mytransforms.cpp
+@@ -493,7 +493,7 @@ void MyTransforms::calculateAnalysisData(/*float *input, */int chunk, Channel *c
+       //goto finished; //return;
+     } else {
+       //calc the periodDiff
+-      if(chunk > 0) {
++      if(chunk > 0 && prevAnalysisData->highestCorrelationIndex!=-1) {
+         float prevPeriod = prevAnalysisData->periodEstimates[prevAnalysisData->highestCorrelationIndex];
+         std::vector<float>::iterator closestIter = binary_search_closest(analysisData.periodEstimates.begin(), analysisData.periodEstimates.end(), prevPeriod);
+         //print_elements(analysisData.periodEstimates.begin(), analysisData.periodEstimates.end());
+-- 
