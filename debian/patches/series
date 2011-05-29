@@ -5,3 +5,5 @@
 0005-Made-sure-previous-analysis-succeeded-before-checkin.patch
 0006-Fixed-incorrectly-specified-jpg-png-extension.patch
 0007-Removed-spam-files.patch
+0008-Fixed-reference-to-tartinilogo.png-to-tartinilogo.jp.patch
+0009-Added-install-target-for-tartini-program.patch

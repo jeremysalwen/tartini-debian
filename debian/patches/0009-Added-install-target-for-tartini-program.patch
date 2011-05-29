@@ -1,0 +1,23 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Sun, 29 May 2011 04:00:43 -0400
+Subject: [PATCH] Added install target for tartini program
+
+---
+ pitch.pro |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/pitch.pro b/pitch.pro
+index b18043d..a2dc46a 100644
+--- a/pitch.pro
++++ b/pitch.pro
+@@ -332,6 +332,9 @@ unix{
+       QMAKE_CXXFLAGS += -pg
+       QMAKE_LFLAGS += -pg
+     }
++    tartini.files=tartini
++    tartini.path=/usr/bin
++    INSTALLS+=tartini
+   }
+ }
+ win32{
+-- 

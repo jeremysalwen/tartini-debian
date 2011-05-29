@@ -1,0 +1,22 @@
+From: Jeremy Salwen <jeremysalwen@gmail.com>
+Date: Sun, 29 May 2011 04:00:17 -0400
+Subject: [PATCH] Fixed reference to tartinilogo.png to tartinilogo.jpg in code
+
+---
+ widgets/mainwindow/mainwindow.cpp |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/widgets/mainwindow/mainwindow.cpp b/widgets/mainwindow/mainwindow.cpp
+index 7cc92f7..caa997d 100644
+--- a/widgets/mainwindow/mainwindow.cpp
++++ b/widgets/mainwindow/mainwindow.cpp
+@@ -1216,7 +1216,7 @@ TartiniDialog::TartiniDialog(QWidget *parent) : QDialog(parent, NULL, true)
+   Q3BoxLayout *topLayout = new Q3HBoxLayout(layout);
+   QLabel *tartiniPicture = new QLabel(this, "TartiniPicture");
+   //QPixmap *tartiniPixmap = new QPixmap();
+-  QPixmap tartiniPixmap(":/res/tartinilogo.png", "PNG");
++  QPixmap tartiniPixmap(":/res/tartinilogo.jpg", "JPG");
+   tartiniPicture->setPixmap(tartiniPixmap);
+   tartiniPicture->setBackgroundColor(Qt::black);
+   topLayout->addStretch(10);
+-- 
