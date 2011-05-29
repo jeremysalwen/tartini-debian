@@ -2,7 +2,7 @@ Source: tartini
 Section: sound
 Priority: extra
 Maintainer: Jeremy Salwen <jeremysalwen@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, libfftw3-dev, libqwt5-qt4-dev, libqt4-opengl-dev
+Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, libfftw3-dev, libqwt5-qt4-dev, libqt4-opengl-dev, libasound2-dev
 Standards-Version: 3.8.4
 Homepage: http://miracle.otago.ac.nz/tartini/
 Vcs-Git: git://github.com/jeremysalwen/tartini-debian.git
@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/jeremysalwen/tartini-debian
 
 Package: tartini
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libqtcore4, libqtgui4, libfftw3, libqwt5-qt4 
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqtcore4, libqtgui4, libfftw3, libqwt5-qt4, libasound2
 Description: A real-time music analysis tool
  Tartini is a program designed as a practical music analysis tool for 
  singers and instrumentalists. Just plug in a microphone and instantly 
