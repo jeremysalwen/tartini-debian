@@ -1,6 +1,6 @@
 From: Jeremy Salwen <jeremysalwen@gmail.com>
 Date: Sat, 28 May 2011 03:18:18 -0400
-Subject: [PATCH] Made sure previous analysis succeeded before checking results.  Fixes segfault.
+Subject: [PATCH] Made sure previous analysis succeeded before checking results. Fixes segfault.
 
 ---
  general/mytransforms.cpp |    2 +-

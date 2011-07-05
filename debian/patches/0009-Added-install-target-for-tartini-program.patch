@@ -7,10 +7,10 @@ Subject: [PATCH] Added install target for tartini program
  1 files changed, 3 insertions(+), 0 deletions(-)
 
 diff --git a/pitch.pro b/pitch.pro
-index b18043d..a2dc46a 100644
+index e501f2e..4d644a5 100644
 --- a/pitch.pro
 +++ b/pitch.pro
-@@ -332,6 +332,9 @@ unix{
+@@ -333,6 +333,9 @@ unix{
        QMAKE_CXXFLAGS += -pg
        QMAKE_LFLAGS += -pg
      }

@@ -7,3 +7,4 @@
 0007-Removed-spam-files.patch
 0008-Fixed-reference-to-tartinilogo.png-to-tartinilogo.jp.patch
 0009-Added-install-target-for-tartini-program.patch
+0010-fix-includes-path-and-linkage.patch
