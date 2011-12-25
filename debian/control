@@ -3,10 +3,10 @@ Section: sound
 Priority: extra
 Maintainer: Jeremy Salwen <jeremysalwen@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, libfftw3-dev, libqwt5-qt4-dev, libqt4-opengl-dev, libasound2-dev
-Standards-Version: 3.8.4
+Standards-Version: 3.9.0
 Homepage: http://miracle.otago.ac.nz/tartini/
-Vcs-Git: git://github.com/jeremysalwen/tartini-debian.git
-Vcs-Browser: https://github.com/jeremysalwen/tartini-debian
+Vcs-Git: git://git.debian.org/git/pkg-multimedia/tartini.git
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/tartini.git
 
 Package: tartini
 Architecture: any
