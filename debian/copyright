@@ -1,37 +1,13 @@
-This work was packaged for Debian by:
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Tartini
+Source: http://miracle.otago.ac.nz/tartini/
 
-    Jeremy Salwen <jeremybubs@gmail.com> on Wed, 25 May 2011 19:12:30 -0400
+Files: *
+Copyright: 2002-2007 Philip McLeod <pmcleod@cs.otago.ac.nz>
+License: GPL-2
 
-It was downloaded from:
-
-    http://miracle.otago.ac.nz/tartini/
-
-Upstream Author(s):
-
-    Philip McLeod <pmcleod@cs.otago.ac.nz>
-
-Copyright:
-
-    Copyright (C) 2002-2007 Philip McLeod
-
-License:
-
-    GPL-2
-
-The Debian packaging is:
-
-    Copyright (C) 2011 Jeremy Salwen <jeremysalwen@gmail.com>
-
-and is licensed under the GPL version 2,
-see "/usr/share/common-licenses/GPL-2".
-
-
-
-
-
-
-
-
-
+Files: debian/*
+Copyright: 2011 Jeremy Salwen
+License: GPL-2+
 
 
