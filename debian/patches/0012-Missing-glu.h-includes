@@ -1,0 +1,118 @@
+Description: Missing glu.h includes
+ Some apparent restructuring of system include files meant that several
+ files required explicit includes of <GL/glu.h>.
+ .
+ tartini (1.2-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #515003)
+Author: Jeremy Salwen <jeremysalwen@gmail.com>
+Bug-Debian: http://bugs.debian.org/515003
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- tartini-1.2.orig/widgets/htrack/htrackwidget.cpp
++++ tartini-1.2/widgets/htrack/htrackwidget.cpp
+@@ -13,6 +13,8 @@
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
+ 
++#include <GL/glu.h>
++
+ #include <QMouseEvent>
+ #include <QWheelEvent>
+ 
+--- tartini-1.2.orig/widgets/vibrato/vibratowidget.cpp
++++ tartini-1.2/widgets/vibrato/vibratowidget.cpp
+@@ -12,6 +12,8 @@
+    
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
++#include <GL/glu.h>
++
+ #include <QPainter>
+ 
+ #include "vibratowidget.h"
+--- tartini-1.2.orig/widgets/vibrato/vibratospeedwidget.cpp
++++ tartini-1.2/widgets/vibrato/vibratospeedwidget.cpp
+@@ -12,6 +12,8 @@
+    
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
++#include <GL/glu.h>
++
+ #include "vibratospeedwidget.h"
+ #include "gdata.h"
+ #include "channel.h"
+--- tartini-1.2.orig/widgets/vibrato/vibratotunerwidget.cpp
++++ tartini-1.2/widgets/vibrato/vibratotunerwidget.cpp
+@@ -12,6 +12,8 @@
+    
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
++#include <GL/glu.h>
++
+ #include "vibratotunerwidget.h"
+ #include "gdata.h"
+ #include "channel.h"
+--- tartini-1.2.orig/widgets/vibrato/vibratoperiodwidget.cpp
++++ tartini-1.2/widgets/vibrato/vibratoperiodwidget.cpp
+@@ -12,6 +12,8 @@
+    
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
++#include <GL/glu.h>
++
+ #include "vibratoperiodwidget.h"
+ #include "gdata.h"
+ #include "channel.h"
+--- tartini-1.2.orig/widgets/vibrato/vibratocirclewidget.cpp
++++ tartini-1.2/widgets/vibrato/vibratocirclewidget.cpp
+@@ -12,6 +12,8 @@
+    
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
++#include <GL/glu.h>
++
+ #include "vibratocirclewidget.h"
+ #include "gdata.h"
+ #include "channel.h"
+--- tartini-1.2.orig/widgets/freq/freqwidgetGL.cpp
++++ tartini-1.2/widgets/freq/freqwidgetGL.cpp
+@@ -13,6 +13,7 @@
+    Please read LICENSE.txt for details.
+  ***************************************************************************/
+ 
++#include <GL/glu.h>
+ 
+ 
+ #include <qpixmap.h>
+--- tartini-1.2.orig/general/mygl.h
++++ tartini-1.2/general/mygl.h
+@@ -1,6 +1,8 @@
+ #ifndef MYGL_H
+ #define MYGL_H
+ 
++#include <GL/glu.h>
++
+ #include <QGLWidget>
+ 
+ struct MyGLfloat2d {
+--- tartini-1.2.orig/general/myglfonts.cpp
++++ tartini-1.2/general/myglfonts.cpp
+@@ -1,3 +1,5 @@
++#include <GL/glu.h>
++
+ #include "myglfonts.h"
+ #include <QImage>
+ #include <QPainter>
